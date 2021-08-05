@@ -13,6 +13,6 @@ Rails.application.routes.draw do
 
   resources :users
   resources :recognitions do
-    resouces :users, only: :create
+    resources :users, only: :create
   end
 end
