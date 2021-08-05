@@ -3,7 +3,7 @@ class CreateRecognitions < ActiveRecord::Migration[6.0]
     create_table :recognitions do |t|
       t.string :name
       t.string :value
-      t.string :messsage
+      t.string :message
       
       t.timestamps
     end

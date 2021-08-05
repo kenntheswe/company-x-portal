@@ -1,3 +1,9 @@
 <div>
-  
+  <%= simple_form_for @recognition, remote:true do |f| %>
+  <%= f.input :name, label: "Coworker's name:" %>
+  <%= f.input :value, label: "Value to recognize:" %>
+  <%= f.input :message, label: "Additional info:" %>
+  <%= link_to "Back", users_path %>
+  <%= f.submit "Submit" %>
+  <% end %>
 </div>
