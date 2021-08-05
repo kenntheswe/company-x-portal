@@ -1,13 +1,15 @@
 <%= render "shared/navbar" %>
 <div class="container mt-5">
   <div class="card text-center p-5">
+  <%# recognition %>
     <h1>Would you like to recognize your coworker?</h1>
     <div>
       <%= link_to "Sure", new_recognition_path, class: "btn btn-primary btn-lg mt-4" %> 
     </div>
   </div>
+  <%# list of coworkers %>
   <h1 class="mt-5">Coworkers</h1>
-  <div class="card-container">
+  <div class="card-container mb-5">
     <% @users.each do |user| %>
       <div class="card p-3">
         <h5><%= user.name %></h5>

@@ -1,5 +1,6 @@
 <%= render "shared/navbar" %>
 <div class="container d-flex justify-content-center mt-5">
+  <%# recognition form %>
   <%= form_for @recognition, remote:true do |f| %>
   Coworker's name:<br/><%= f.select :user, ["Choose a coworker", "Abby Collins", "Michael Doe", "Diana Little", "Frankie Hall", "Lily Hong", "Peter Turner"], selected: "Choose a coworker", class: "form-control" %><br/>
   Value to recognize:<%= f.text_field :value, class: "form-control mb-1" %>

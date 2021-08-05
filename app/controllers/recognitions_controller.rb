@@ -15,6 +15,7 @@ class RecognitionsController < ApplicationController
   
   private
 
+  # parameter for creating new recognition
   def recognition_params
     params.require(:recognition).permit(:name, :value, :message)
   end
