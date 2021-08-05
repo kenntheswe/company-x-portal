@@ -1,9 +1,12 @@
-<div>
+<%= render "shared/navbar" %>
+<div class="container d-flex justify-content-center mt-5">
   <%= simple_form_for @recognition, remote:true do |f| %>
   <%= f.input :name, label: "Coworker's name:" %>
   <%= f.input :value, label: "Value to recognize:" %>
-  <%= f.input :message, label: "Additional info:" %>
-  <%= link_to "Back", users_path %>
-  <%= f.submit "Submit" %>
+  <%= f.input :message, label: "Additional info:", as: :text %>
+  <div class="d-flex justify-content-between mt-3">
+    <%= link_to "Back", users_path, class: "btn btn-secondary" %>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  </div>
   <% end %>
 </div>
