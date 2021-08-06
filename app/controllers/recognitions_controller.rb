@@ -9,8 +9,11 @@ class RecognitionsController < ApplicationController
   # create new recognition
   def create
     @recognition = Recognition.new(recognition_params)
-    @recognition.save
-    redirect_to users_path, notice: "Recognition is sent to your coworker & his/ her manager."
+    if @recognition.save
+      redirect_to users_path, notice: "Recognition is sent to your coworker & his/ her manager."
+    else 
+      render :new
+    end
   end
   
   private
