@@ -10,7 +10,7 @@ class RecognitionsController < ApplicationController
   def create
     @recognition = Recognition.new(recognition_params)
     @recognition.save
-    redirect_to users_path
+    redirect_to users_path, notice: "Recognition is sent to your coworker & his/ her manager."
   end
   
   private
