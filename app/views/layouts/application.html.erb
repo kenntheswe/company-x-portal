@@ -11,13 +11,6 @@
 
   <body>
     <%= yield %>
-    <%# notice appears if the user sends a recognotion form %>
-    <% if notice %>
-      <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <%= notice %>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-    <% end %>
   </div>
   </body>
 </html>
