@@ -4,7 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :recognitions
+  has_many :recognitions_as_sender, class_name: "Recognition", foreign_key: sender_id
+  has_many :recognitions_as_receiver, class_name: "Recognition", foreign_key: receiver_id
 
   validates :name, presence: true
   validates :title, presence: true
