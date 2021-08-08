@@ -3,8 +3,8 @@
   <%# recognition form %>
   <%= simple_form_for @recognition, remote:true do |f| %>
   <%= f.input :name, class: "form-control" %><br/>
-  <%= f.input :value, class: "form-control mb-1" %>
-  <%= f.input :message, class: "form-control" %>
+  <%= f.input :value, class: "form-control mb-1" %><br/>
+  <%= f.input :message, class: "form-control" %><br/>
   <div class="d-flex justify-content-between mt-3">
     <%= link_to "Back", users_path, class: "btn btn-secondary" %>
     <%= f.submit "Submit", class: "btn btn-primary" %>
