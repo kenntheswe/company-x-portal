@@ -1,6 +1,5 @@
 class Recognition < ApplicationRecord
-  belongs_to :sender, class_name: "User"
-  belongs_to :receiver, class_name: "User"
+  belongs_to :user
 
   validates :name, presence: true
   validates :value, presence: true
